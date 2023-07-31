@@ -1,0 +1,192 @@
+@import '../../App.scss';
+
+
+.prueba__footer {
+    background-color: #{$negro};
+    color: #{$claro};
+    width: 100%;
+    height: auto;
+    padding-bottom: 60px;
+
+    .prueba__footer-info {
+        font-size: .8rem;
+        border-top: 1px solid #{$claro};
+        padding-bottom: 60px;
+
+        @include tablet {
+            display: flex;
+            justify-content: space-around;
+            font-size: .9rem;
+        }
+
+        .contenedor-1 {
+            width: 100%;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            margin-top: 70px;
+
+            @include tablet {
+                width: 12%;
+                flex-wrap: wrap;
+                flex-direction: column;
+                margin-top: 0;
+                padding-top: 40px;
+            }
+
+            p {
+                width: 40%;
+                align-self: self-end;
+                margin: 0 5% 0 0;
+                text-align: end;
+                font-size: 1.8rem;
+                font-weight: 700;
+
+                @include telefono {
+                    width: 30%;
+                    font-size: 2.2rem;
+                }
+
+                @include tablet {
+                    width: 100%;
+                    font-size: 1.4rem;
+                }
+            }
+
+            .vass {
+                font-family: 'Permanent Marker', cursive;
+                display: none;
+                
+
+                @include tablet {
+                    display: block;
+                    text-align: start;
+                }
+            }
+        }
+
+        .contenedor-2 {
+            display: flex;
+            justify-content: space-between;
+
+            @include tablet {
+                width: 45%;
+            }
+
+            div {
+                width: 45%;
+                padding: 30px 0 0 30px;
+                
+
+                ul {
+                    padding: 0;
+                    list-style: none;
+
+                    li {
+                        margin: 2px;
+                    }
+                }
+            }
+        }
+
+        .contenedor-3 {
+            display: flex;
+
+            @include tablet {
+                width: 20%;
+                flex-direction: column;
+                justify-content: space-between;
+                text-align: end;
+            }
+
+            div {
+                width: 40%;
+                padding: 30px 0 0 30px;
+
+                @include tablet {
+                    width: 86%;
+                }
+
+                ul {
+                    list-style: none;
+                    padding: 0;
+
+                    li {
+                        margin: 2px;
+                    }
+
+                }
+            }
+
+            img {
+                display: none;
+                width: 200px;
+                height: 90px;
+
+                @include tablet {
+                    display: block;
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+
+        }
+    }
+
+    .prueba__footer-politicas {
+        font-size: .7rem;
+        border-top: 1px solid #{$claro};
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 50px;
+
+        @include desktop {
+            flex-direction: row;
+            font-size: .8rem;
+        }
+
+        div {
+            width: 70%;
+            margin: 0 auto;
+            font-size: .8rem;
+            @include desktop {
+                font-size: .9rem;
+            }
+        }
+
+        ul{
+            width: 70%;
+            margin: 15px auto;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+            justify-content: center;
+            padding: 0;
+
+            li {
+                margin: 0 5px;
+                @include desktop {
+                    border-right: 1px solid #{$claro};
+                    padding-right: 10px;
+                    align-self: center;
+
+                    &:last-child {
+                        border: none;
+                    }
+                }
+            }
+        }
+
+        .redes {
+            font-size: 1.3rem;
+            
+            li {
+                @include desktop {
+                    border: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,198 @@
+@import '../../App.scss';
+
+.prueba__header {
+    width: 100%;
+    background-image: url('../../assets/images/backgroundStairs.jpg');
+    background-size: cover;
+    color: #{$claro};
+    height: 50vh;
+
+    @include tablet {
+        height: 60vh;
+    }
+
+    @include desktop {
+        display: flex;
+    }
+
+    .container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        div {
+            z-index: 20;
+            position: fixed;
+            height: 40px;
+            align-items: center;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            transition: all 1s ease;
+
+            .menu-movil {
+                top:0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: start;
+                background-color: #{$negro};
+                transition: all 1s ease;
+
+                p{
+                    margin: 20% 0 7% 20px;
+                }
+
+                ul{
+                    margin: 0;
+                    list-style: none;
+                    padding: 0;
+                    font-weight: bold;
+
+                    p {
+                        margin: 10% 0 0 20px;
+                    }
+                }
+            }
+
+            .prueba__header-logo {
+                width: 30%;
+                font-family: 'Permanent Marker', cursive;
+                font-size: 1.7rem;
+
+                p {
+                    margin: 10px 20px 10px 20px;
+                }
+
+            }
+
+            .prueba__header-movil {
+                display: flex;
+                width: 90%;
+                align-items: center;
+                justify-content: end;
+                padding-right: 15px;
+
+                @include telefono {
+                    width: 93%;
+                }
+
+                @include tablet {
+                    width: 96%;
+                }
+
+                svg {
+                    font-size: 1.7rem;
+                    margin: 8px;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+                @include desktop {
+                    display: none;
+                }
+            }
+
+            .prueba__header-desktop {
+                display: none;
+                align-items: center;
+                width: 98%;
+
+                @include desktop {
+                    display: flex;
+                }
+
+                .listado-servicios {
+                    width: 100%;
+                    display: flex;
+                    list-style: none;
+                    align-items: center;
+                    justify-content: end;
+
+                    @include desktop {
+                        margin: 0;
+                    }
+
+                    li {
+                        margin: 0 10px;
+
+                        p {
+                            font-size: 1.1vw;
+                            margin: 5px 5px 0;
+                        }
+
+                        .lupa {
+                            font-size: 2.5vw;
+
+                            &:hover {
+                                cursor: pointer;
+                            }
+                        }
+                    }
+
+                    .talento {
+                        margin-left: 20px;
+                        padding-left: 2%;
+                        color:aqua;
+
+                        @include large {
+                            margin-left: 50px;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        h1 {
+            position: absolute;
+            bottom: 0;
+            box-sizing: border-box;
+            margin: 10px 0px 10px 5px;
+            font-size: 16vw;
+            color: rgba(255, 255, 255, 0.5);
+
+            @include desktop {
+                font-size: 6vw;
+                right: 2%;
+                bottom: 5%;
+            }
+        }
+    }
+
+    .prueba__header-talento {
+        display: none;
+        background-color: transparent;
+        border-left: 1px #{$claro} solid;
+
+        @include desktop {
+            display: flex;
+            width: 10%;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        div{
+            height: 40px;
+            margin: 13%;
+            display: flex;
+            flex-direction: column;
+            font-size: 1.2vw;
+            align-self: center;
+            justify-content: flex-end;
+        }
+    }
+    
+
+}
